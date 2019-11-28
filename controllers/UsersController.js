@@ -27,6 +27,7 @@ const UsersController = {
       .create({
         firstName: body.firstName,
         lastName: body.lastName,
+        password: body.password,
       })
       .then(user => {
         return res.send(user);
