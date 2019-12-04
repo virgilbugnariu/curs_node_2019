@@ -1,4 +1,7 @@
 'use strict';
+
+// Migratia initiala care defineste field-urile din tabela Users
+// `npx sequelize db:migrate` pentru a rula migratia
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('Users', {
