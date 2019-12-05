@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "test": "NODE_ENV=test mocha --timeout 10000",
+    "start": "NODE_ENV=development nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+    "mocha": "^6.2.2",
     "sequelize": "^5.21.2",
     "sequelize-cli": "^5.5.1",
     "sqlite3": "^4.1.0"

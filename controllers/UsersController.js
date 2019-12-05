@@ -7,7 +7,8 @@ const UsersController = {
       .findByPk(req.params.id)
       .then(data => {
         if (!data) {
-          return res.send({});
+          // Trimitem 404 Not Found
+          return res.status(404).send({});
         }
 
         return res.send(data);
@@ -25,12 +26,14 @@ const UsersController = {
     models
       .User
       .create({
+        email: body.email,
         firstName: body.firstName,
         lastName: body.lastName,
         password: body.password,
       })
       .then(user => {
-        return res.send(user);
+        // Trimitem status code 201 Created
+        return res.status(201).send(user);
       });
   },
   update: (req, res) => {
