@@ -68,7 +68,10 @@ describe('Users', () => {
         .get('/users')
         .set({ Authorization: 'Bearer ' + token })
         .end((err, res) => {
-          res.should.have.status(200);
+          // res.should.have.status(200);
+          // res.should.have.property('array');
+          assert(res.header.statusCode === 200, "nu e 200");
+          // assert(res.body, Array);
           done();
         });
     });
