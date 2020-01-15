@@ -11,6 +11,14 @@ module.exports = {
     return queryInterface.bulkInsert('Users',
     [
       {
+        "firstName": "Jonathan",
+        "lastName": "Managesque",
+        "email": "admin@admin.org",
+        "password": "parola123",
+        "createdAt": "Thu, 14 Nov 2019 01:23:05 -0800",
+        "updatedAt": "Mon, 30 Sep 2019 14:54:23 -0700"
+      },
+      {
         "firstName": "Keefe",
         "lastName": "Stanley",
         "email": "mauris@pellentesquetellus.org",
